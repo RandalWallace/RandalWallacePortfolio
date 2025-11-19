@@ -53,3 +53,21 @@ footer {
     color: white;
     margin-top: 40px;
 }
+
+.flex-container, .role-container {
+    display: flex;
+    align-items: flex-start; /* align top of text and image */
+    gap: 20px; /* space between text and image */
+    margin-bottom: 30px;
+}
+
+.flex-container .text, .role-container .text {
+    flex: 1; /* text takes remaining width */
+}
+
+.flex-container .image img, .role-container .image img {
+    max-width: 150px; /* image width */
+    height: auto;
+    border-radius: 8px; /* optional styling */
+}
+
