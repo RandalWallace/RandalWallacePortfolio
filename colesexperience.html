@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Intership Experience at Coles (TBM Tech Finance) </title>
+    <title>My Internship Experience at Coles (TBM Tech Finance) </title>
     <link rel="stylesheet" href="style.css" />
     <style>
         /* Additional styles for article page */
@@ -79,6 +79,34 @@
             text-align: justify;
         }
 
+        /* Center all images */
+        article img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Image grid for side-by-side images */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .image-grid img {
+            width: 100%;
+            margin: 0;
+        }
+
+        /* Full width images */
+        .full-width-img {
+            max-width: 100%;
+            width: 100%;
+        }
+
         .highlight-box {
             background: #fef2f2;
             border-left: 4px solid #e11d48;
@@ -100,6 +128,10 @@
             margin-bottom: 0;
         }
 
+        .highlight-box img {
+            margin: 15px auto;
+        }
+
         .info-box {
             background: #eff6ff;
             border-left: 4px solid #2563eb;
@@ -115,6 +147,10 @@
 
         .info-box p {
             margin-bottom: 0;
+        }
+
+        .info-box img {
+            margin: 15px auto;
         }
 
         .key-points {
@@ -186,6 +222,10 @@
             .skills-grid {
                 grid-template-columns: 1fr;
             }
+
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -209,20 +249,22 @@
             </p>
 
             <h2>Understanding Coles Beyond the Checkout</h2>
-            <img src="images/coles_ex1.jpg" alt="Coles Supermarket" style="max-width: 400px; margin: 20px 0; border-radius: 8px;"> 
+            <img src="images/coles_ex1.jpg" alt="Coles Supermarket" class="full-width-img"> 
  
             <p>
                 Most Australians know Coles as their local supermarket, but behind those 850+ stores across the country lies a sophisticated technology-powered operation. From the early 1900s to today, Coles has evolved into far more than just a grocery retailer—it's a tech giant that helps Australians eat and live better every day.
             </p>
 
-            <img src="images/coles_ex2.jpg" alt="Coles Supermarket" style="max-width: 400px; margin: 20px 0; border-radius: 8px;">    
+            <img src="images/coles_ex2.jpg" alt="Coles Operations" class="full-width-img">    
             
             <p>
                 Technology has been integral to Coles since the 1990s, powering everything from data analytics and supply chain automation to online services. The digital transformation accelerated dramatically in recent years, with cloud services, AI, and advanced infrastructure becoming crucial to daily operations. But with this technological growth came a significant challenge: managing the exploding costs and complexity of IT systems.
             </p>
 
-            <img src="images/coles_ex3.png" alt="Coles Technology History" style="max-width: 600px; margin: 20px 0; border-radius: 8px;">
-            <img src="images/coles_ex7.png" alt="Coles Technology History" style="max-width: 600px; margin: 20px 0; border-radius: 8px;">
+            <div class="image-grid">
+                <img src="images/coles_ex3.png" alt="Coles Technology History">
+                <img src="images/coles_ex7.png" alt="Coles Technology Evolution">
+            </div>
         
             <h2>What is Technology Business Management?</h2>
             <p>
@@ -237,27 +279,30 @@
             <div class="highlight-box">
                 <h4>Why do we even need TBM?</h4>
 
-                <img src="images/coles_ex9.png" alt="TBM Scenario" style="max-width: 100%; margin: 15px 0; border-radius: 8px;">
+                <img src="images/coles_ex9.png" alt="TBM Scenario" class="full-width-img">
                 
                 <p>
                     Imagine you're developing an application and reach the point where you need database infrastructure. Under pressure to meet deadlines, you decide to outsource to a cloud provider. Since your multi-billion dollar corporation is covering the costs, you select powerful hardware with premium features from AWS.
                 </p>
-                <img src="images/coles_ex10.jpg" alt="TBM Scenario" style="max-width: 100%; margin: 15px 0; border-radius: 8px;">
+                <img src="images/coles_ex10.jpg" alt="TBM Scenario - Invoice" class="full-width-img">
                 
                 <p style="margin-top: 15px;">
-                    At year's end, an expensive invoice arrives. Now you must explain to your general manager why costs spiraled—only to discover the company already had pre-existing contracts with AWS and Azure that could have been leveraged. Without oversight, duplicate spending, security risks, and operational inefficiencies multiply rapidly.
+                    At year's end, an expensive invoice arrives. Now you must explain to your general manager why costs spiralled—only to discover the company already had pre-existing contracts with AWS and Azure that could have been leveraged. Without oversight, duplicate spending, security risks, and operational inefficiencies multiply rapidly.
                 </p>
-                <img src="images/coles_ex11.jpg" alt="TBM Scenario" style="max-width: 100%; margin: 15px 0; border-radius: 8px;">
-                <img src="images/coles_ex12.jpg" alt="TBM Scenario" style="max-width: 100%; margin: 15px 0; border-radius: 8px;">
+                
+                <div class="image-grid">
+                    <img src="images/coles_ex11.jpg" alt="TBM Scenario - Consequences">
+                    <img src="images/coles_ex12.jpg" alt="TBM Scenario - Existing Contracts">
+                </div>
                 
                 <p style="margin-top: 15px;">
-                    <strong>This is exactly why TBM exists! Without oversight, costs spiral out of control.</strong> Our team would prevent these scenarios, optimizes technology costs, and ensures those savings are passed on to customers through initiatives like lower grocery prices.
+                    <strong>This is exactly why TBM exists! Without oversight, costs spiral out of control.</strong> Our team would prevent these scenarios, optimise technology costs, and ensure those savings are passed on to customers through initiatives like lower grocery prices.
                 </p>
             </div>
 
             <div class="info-box">
                 <h4>The Growing Importance of Technology Finance</h4>
-                <img src="images/coles_ex13.png" alt="Rising IT Spending" style="max-width: 100%; margin: 15px 0; border-radius: 8px;">
+                <img src="images/coles_ex13.png" alt="Rising IT Spending" class="full-width-img">
                 
                 <p>
                     In Australia alone, IT spending is projected to surge 8.7% in 2025, driven primarily by AI, cybersecurity, and hardware demands. With rapid shifts to cloud services like Microsoft Azure and AWS, companies are investing heavily to stay competitive, innovate faster, and support remote workforces. This makes technology finance not just important—it's mission-critical.
@@ -265,20 +310,33 @@
             </div>
 
             <p>
-                As a Business Analyst in TBM, I contributed to reducing costs while simultaneously increasing technology investment efficiency. Our work provided clarity on tech investments organization-wide and equipped senior stakeholders with the information they needed to make informed decisions about technology strategy.
+                As a Business Analyst in TBM, I contributed to reducing costs while simultaneously increasing technology investment efficiency. Our work provided clarity on tech investments organisation-wide and equipped senior stakeholders with the information they needed to make informed decisions about technology strategy.
             </p>
             
-
-            <img src="images/coles_ex14.png" alt="TBM Team Goals"> 
+            <img src="images/coles_ex14.png" alt="TBM Team Goals" class="full-width-img"> 
 
             <h2>My Role: Skills and Responsibilities</h2>
 
-            <img src="images/coles_ex15.png" alt="Business Analyst Skills" style="max-width: 400px; margin: 20px 0; border-radius: 8px;">
+            <img src="images/coles_ex15.png" alt="Business Analyst Skills">
             
             <p>
-                Working as a Business Analyst in TBM required a unique blend of capabilities. I found myself at the intersection of three critical domains: cross-organizational dialogue with technology stakeholders, back-end modeling and data analysis, and cost accounting. Each day involved navigating between these worlds, translating concepts and facilitating understanding across teams with vastly different vocabularies and priorities.
+                Working as a Business Analyst in TBM required a unique blend of capabilities. I found myself at the intersection of three critical domains: cross-organisational dialogue with technology stakeholders, back-end modelling and data analysis, and cost accounting. Each day involved navigating between these worlds, translating concepts and facilitating understanding across teams with vastly different vocabularies and priorities.
             </p>
 
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Technical Analysis</h4>
+                    <p>Back-end modelling, data analysis using Apptio, and understanding complex technology infrastructure and architecture.</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Financial Acumen</h4>
+                    <p>Cost accounting, reconciliation techniques, and creating Total Cost of Ownership (TCO) models for infrastructure spending.</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Communication</h4>
+                    <p>Cross-organisational collaboration, translating technical concepts for finance teams and financial concepts for engineers.</p>
+                </div>
+            </div>
 
             <h2>Three Key Objectives for My Placement</h2>
 
@@ -287,11 +345,14 @@
             </p>
 
             <h3>1. Gaining Exposure to Industry Technology</h3>
-            <img src="images/coles_ex16.png" alt="Apptio Dashboard Example" style="max-width: 600px; margin: 20px 0; border-radius: 8px;">
-            <img src="images/coles_ex17.png" alt="Apptio Dashboard Example" style="max-width: 600px; margin: 20px 0; border-radius: 8px;">  
+            
+            <div class="image-grid">
+                <img src="images/coles_ex16.png" alt="Industry Technology">
+                <img src="images/coles_ex17.png" alt="Apptio Learning">
+            </div>
         
             <p>
-                I wanted to apply my academic knowledge to real-world applications. While university taught me problem-solving and computational thinking, I knew that hands-on experience with industry software was something no classroom could truly replicate. Technology finance is an emerging niche that's becoming increasingly prevalent in corporations, and I recognized this as a valuable career opportunity.
+                I wanted to apply my academic knowledge to real-world applications. While university taught me problem-solving and computational thinking, I knew that hands-on experience with industry software was something no classroom could truly replicate. Technology finance is an emerging niche that's becoming increasingly prevalent in corporations, and I recognised this as a valuable career opportunity.
             </p>
             <p>
                 The first half of my placement was genuinely overwhelming. I had no formal training on Apptio, our primary backend system. To overcome this, I leaned on analogies and connected concepts from my data science courses—particularly SQL—to understand how Apptio's model flows. By linking academic concepts to the practical logic of our systems, I began to grasp the underlying architecture before even learning proper syntax.
@@ -299,24 +360,24 @@
             <p>
                 By the end of my placement, I had developed proficiency in Apptio and contributed to creating dashboards and reports that stakeholders used to make significant financial decisions. This transformation from overwhelmed newcomer to confident contributor was one of my proudest achievements.
             </p>
-            <img src="images/coles_ex18.jpg" alt="Apptio Dashboard Example" style="max-width: 600px; margin: 20px 0; border-radius: 8px;">
+            <img src="images/coles_ex18.jpg" alt="Dashboard Creation">
 
             <h3>2. Understanding Corporate Structure and Change Management</h3>
-            <img src="images/coles_ex19.png"  style="max-width: 400px; margin: 20px 0; border-radius: 8px;">
+            <img src="images/coles_ex19.png" alt="Corporate Structure Questions">
             
             <p>
-                Every organization has a unique structure, and academic management theory only provides a foundation. At Coles, TBM was still relatively new—the team had been established less than a year before my arrival. This meant there was limited existing documentation, making independent research challenging.
+                Every organisation has a unique structure, and academic management theory only provides a foundation. At Coles, TBM was still relatively new—the team had been established less than a year before my arrival. This meant there was limited existing documentation, making independent research challenging.
             </p>
             <p>
-                Understanding organizational structure proved crucial for technology finance work. I needed to know who reported to whom, who validated tech spending, and why TBM existed as a separate function from accounting. Initially, meetings were confusing. I started keeping a notebook where I tracked acronyms, roles, and relationships. I sketched diagrams to visualize various structures and asked colleagues questions to build my understanding. This practice helped me see how my work fit into the bigger picture—transforming tasks from mere assignments into meaningful contributions.
+                Understanding organisational structure proved crucial for technology finance work. I needed to know who reported to whom, who validated tech spending, and why TBM existed as a separate function from accounting. Initially, meetings were confusing. I started keeping a notebook where I tracked acronyms, roles, and relationships. I sketched diagrams to visualise various structures and asked colleagues questions to build my understanding. This practice helped me see how my work fit into the bigger picture—transforming tasks from mere assignments into meaningful contributions.
             </p>
-            <img src="images/coles_ex20.png"  style="max-width: 400px; margin: 20px 0; border-radius: 8px;">
+            <img src="images/coles_ex20.png" alt="My Research Notebook">
             <p>
                 This clarified understanding allowed me to work more independently, contribute more effectively in meetings, and build stronger cross-team relationships. It demonstrated to both my team and stakeholders that I was actively engaged in solving business problems.
             </p>
 
             <h3>3. Translating Technical and Financial Terminologies</h3>
-            <img src="images/coles_ex21.png" alt="Bridging Tech and Finance" style="max-width: 500px; margin: 20px 0; border-radius: 8px;">
+            <img src="images/coles_ex21.png" alt="Bridging Tech and Finance">
             
             <p>
                 During my internship interviews, I had identified improving my ability to translate technical concepts into everyday language as a primary goal. This skill is highly valued in the workplace, and I was determined to develop it.
@@ -325,10 +386,10 @@
                 My proudest achievement came when I was tasked with developing a Total Cost of Ownership (TCO) dashboard for infrastructure spending at Coles. The company operates both internal and outsourced infrastructure, and I needed to bridge the gap between technical hardware concepts and financial reporting. This meant explaining computer architecture to my finance team and financial concepts to data engineers.
             </p>
             
-            <img src="images/coles_ex22.png" alt="Data Center Architecture Diagram" style="max-width: 600px; margin: 20px 0; border-radius: 8px;">
+            <img src="images/coles_ex22.png" alt="Data Centre Architecture Diagram" class="full-width-img">
             
             <p>
-                This was intimidating—my double degree hadn't covered much computer hardware, and my knowledge came purely from personal curiosity over the years. I sketched technical diagrams of data center architecture and categorized vendor and fixed asset costs into different infrastructure types. This work enabled more accurate cost calculations and helped Coles evaluate optimal data storage options.
+                This was intimidating—my double degree hadn't covered much computer hardware, and my knowledge came purely from personal curiosity over the years. I sketched technical diagrams of data centre architecture and categorised vendor and fixed asset costs into different infrastructure types. This work enabled more accurate cost calculations and helped Coles evaluate optimal data storage options.
             </p>
 
             <div class="key-points">
@@ -336,7 +397,7 @@
                 <ul>
                     <li>Significantly improved my ability to communicate complex ideas clearly and effectively across disciplines</li>
                     <li>Enabled Coles to make better-informed decisions about data storage options</li>
-                    <li>Realized that my interest in computer engineering concepts was actually a valuable, employable skill</li>
+                    <li>Realised that my interest in computer engineering concepts was actually a valuable, employable skill</li>
                     <li>Took ownership and initiative on a project, demonstrating leadership and independence</li>
                     <li>Strengthened both my accounting knowledge and technical understanding, creating powerful synergy between disciplines</li>
                 </ul>
@@ -349,23 +410,23 @@
             <p>
                 I also developed reconciliation and investigative finance techniques, essentially becoming a detective who tracks down discrepancies and understands why numbers don't match. This analytical work was both challenging and deeply satisfying.
             </p>
-            <img src="images/coles_ex23.png" alt="Data Center Architecture Diagram" style="max-width: 600px; margin: 20px 0; border-radius: 8px;">
+            <img src="images/coles_ex23.png" alt="Additional Skills" class="full-width-img">
         
             <h2>Career Insights and Future Goals</h2>
             <p>
-                This internship clarified what I truly enjoy in professional work: problem-solving, analysis and detective work, and cross-organizational collaboration. I thrived in situations that required me to dig deep, connect dots, and facilitate understanding between different teams.
+                This internship clarified what I truly enjoy in professional work: problem-solving, analysis and detective work, and cross-organisational collaboration. I thrived in situations that required me to dig deep, connect dots, and facilitate understanding between different teams.
             </p>
             <p>
-                The knowledge I gained about both the technology and retail industries feels universally applicable. Technology skills transfer across any organization, and understanding the operations behind a supermarket giant provides insights relevant in any country—a particularly valuable asset since I aspire to travel for my career.
+                The knowledge I gained about both the technology and retail industries feels universally applicable. Technology skills transfer across any organisation, and understanding the operations behind a supermarket giant provides insights relevant in any country—a particularly valuable asset since I aspire to travel for my career.
             </p>
             <p>
-                Looking forward, I want to continue utilizing my ability to translate between technology and finance while engaging in problem-solving and analysis. Two potential career paths particularly excite me:
+                Looking forward, I want to continue utilising my ability to translate between technology and finance while engaging in problem-solving and analysis. Two potential career paths particularly excite me:
             </p>
             <p>
                 <strong>Technology Sales (B2B):</strong> After working in tech finance, I believe I could effectively demonstrate the value behind technology products to business clients. Understanding both the technical capabilities and financial implications gives me a unique perspective on how to position solutions.
             </p>
             <p>
-                <strong>Consulting:</strong> Providing creative technology advice and services to businesses appeals to my desire for variety, problem-solving, and cross-organizational engagement. The consulting model would allow me to apply lessons learned at Coles across diverse industries and challenges.
+                <strong>Consulting:</strong> Providing creative technology advice and services to businesses appeals to my desire for variety, problem-solving, and cross-organisational engagement. The consulting model would allow me to apply lessons learned at Coles across diverse industries and challenges.
             </p>
 
             <h2>Reflections</h2>
