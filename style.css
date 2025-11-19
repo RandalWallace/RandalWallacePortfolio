@@ -1,3 +1,4 @@
+/* Base styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,6 +7,7 @@ body {
     color: #222;
 }
 
+/* Header */
 header {
     background: #1a1a1a;
     color: white;
@@ -13,6 +15,7 @@ header {
     text-align: center;
 }
 
+/* Sections */
 section {
     max-width: 900px;
     margin: 40px auto;
@@ -28,6 +31,34 @@ h2 {
     margin-bottom: 15px;
 }
 
+/* Flex containers for About Me and roles */
+.flex-container, .role-container {
+    display: flex;
+    align-items: flex-start; /* Align text with top of images */
+    gap: 20px;               /* Space between text and images */
+    margin-bottom: 30px;
+}
+
+.flex-container .text, .role-container .text {
+    flex: 1; /* Text takes remaining space */
+}
+
+/* Image styling */
+.flex-container .image img, 
+.role-container .image img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Stack multiple images vertically */
+.role-container .image {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    gap: 10px;              /* Space between stacked images */
+}
+
+/* Roles inside experience and education */
 .role {
     display: flex;
     justify-content: space-between;
@@ -41,11 +72,13 @@ h2 {
     font-size: 0.95rem;
 }
 
+/* Lists */
 ul {
     margin-top: 5px;
     margin-bottom: 20px;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
@@ -53,21 +86,3 @@ footer {
     color: white;
     margin-top: 40px;
 }
-
-.flex-container, .role-container {
-    display: flex;
-    align-items: flex-start; /* align top of text and image */
-    gap: 20px; /* space between text and image */
-    margin-bottom: 30px;
-}
-
-.flex-container .text, .role-container .text {
-    flex: 1; /* text takes remaining width */
-}
-
-.flex-container .image img, .role-container .image img {
-    max-width: 150px; /* image width */
-    height: auto;
-    border-radius: 8px; /* optional styling */
-}
-
