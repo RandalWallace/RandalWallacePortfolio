@@ -1,31 +1,34 @@
 /* RESET EVERYTHING */
 * {
     box-sizing: border-box;
-    border-radius: 0 !important; /* Forces off the rounded corners from your old CSS */
+    border-radius: 0 !important; /* Forces off any modern rounded corners */
 }
 
 body {
-    background-color: #008080 !important; /* Teal Desktop */
+    background-color: #008080 !important; /* Classic Teal */
     margin: 0;
-    padding: 20px 20px 60px 20px;
+    /* Massive 80px bottom padding ensures the taskbar doesn't cover the footer/skills */
+    padding: 20px 20px 80px 20px !important; 
     font-family: "MS Sans Serif", "Arial", sans-serif;
     color: black;
 }
 
 #desktop {
     max-width: 900px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    margin: 0 auto;
+    display: block !important; /* Block prevents flexbox from squishing your content */
 }
 
 /* THE WINDOW */
 .window {
     background: #c0c0c0;
-    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px #808080, inset 2px 2px #dfdfdf;
+    box-shadow: inset -1px -1px #0a0a0a, 
+                inset 1px 1px #fff, 
+                inset -2px -2px #808080, 
+                inset 2px 2px #dfdfdf;
     padding: 3px;
-    display: block; /* Ensure it's not hidden */
+    margin-bottom: 25px !important; /* Creates the spacing between windows */
+    display: block;
 }
 
 .title-bar {
@@ -42,23 +45,53 @@ body {
     font-size: 13px;
 }
 
+.title-bar-controls {
+    display: flex;
+    gap: 2px;
+}
+
+.title-bar-controls button {
+    padding: 0;
+    min-width: 16px;
+    height: 14px;
+    background: #c0c0c0;
+    border: 1px solid #fff;
+    border-right-color: #808080;
+    border-bottom-color: #808080;
+    font-size: 10px;
+    cursor: pointer;
+}
+
 .window-body {
     padding: 15px;
     margin: 4px;
     line-height: 1.4;
-    overflow: visible; /* Fixes the cut-off text issue */
+    overflow: visible; 
+}
+
+/* TYPOGRAPHY FIXES */
+h1, h2 {
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.2rem;
+    border-bottom: 2px inset #dfdfdf;
+    padding-bottom: 5px;
+    margin-top: 20px;
 }
 
 /* LAYOUT FIXES */
 .flex-container, .role-container {
     display: flex;
-    flex-wrap: wrap; /* Allows text to wrap on smaller screens */
+    flex-wrap: wrap; /* Allows text to wrap perfectly on smaller screens */
     gap: 20px;
+    margin-bottom: 20px;
 }
 
 .text {
     flex: 1;
-    min-width: 250px; /* Ensures text doesn't get squeezed too thin */
+    min-width: 250px; 
 }
 
 .role {
@@ -66,6 +99,11 @@ body {
     justify-content: space-between;
     margin-bottom: 10px;
     border-bottom: 1px solid #808080;
+    font-weight: bold;
+}
+
+.date {
+    font-weight: normal;
 }
 
 /* THE IMAGE LOOK */
@@ -88,9 +126,23 @@ img {
     color: black;
     text-decoration: none;
     padding: 4px 10px;
-    display: inline-block;
-    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px #808080, inset 2px 2px #dfdfdf;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: inset -1px -1px #0a0a0a, 
+                inset 1px 1px #fff, 
+                inset -2px -2px #808080, 
+                inset 2px 2px #dfdfdf;
     font-size: 13px;
+    cursor: pointer;
+}
+
+.win95-btn:active, .start-btn:active {
+    box-shadow: inset 1px 1px #0a0a0a, 
+                inset -1px -1px #fff, 
+                inset 2px 2px #808080, 
+                inset -2px -2px #dfdfdf;
+    padding: 5px 9px 3px 11px; 
 }
 
 /* TASKBAR */
@@ -108,9 +160,20 @@ img {
     z-index: 9999;
 }
 
+.taskbar-divider {
+    width: 2px;
+    height: 20px;
+    background: #808080;
+    border-right: 1px solid #fff;
+    margin: 0 10px;
+}
+
 .system-tray {
     margin-left: auto;
     border: 2px inset #dfdfdf;
     padding: 2px 10px;
     font-size: 11px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
