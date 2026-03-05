@@ -7,7 +7,7 @@
 body {
     background-color: #008080 !important; /* Classic Teal */
     margin: 0;
-    /* Massive 80px bottom padding ensures the taskbar doesn't cover the footer/skills */
+    /* Massive bottom padding ensures the taskbar doesn't cover the footer/skills */
     padding: 20px 20px 80px 20px !important; 
     font-family: "MS Sans Serif", "Arial", sans-serif;
     color: black;
@@ -120,6 +120,26 @@ img {
     display: block;
 }
 
+.profile-pic {
+    max-width: 250px; /* Increased from 150px to give it more height */
+    height: auto;
+}
+
+/* Force text and images to stay side-by-side on desktop */
+@media (min-width: 768px) {
+    .flex-container, .role-container {
+        flex-wrap: nowrap; /* Prevents the image from dropping below the text */
+    }
+    
+    .text {
+        flex: 1; /* Allows text to take up remaining space */
+    }
+    
+    .image-well {
+        flex-shrink: 0; /* Prevents the image from being squished */
+    }
+}
+
 /* BUTTONS */
 .win95-btn, .start-btn {
     background: #c0c0c0;
@@ -176,4 +196,40 @@ img {
     display: flex;
     align-items: center;
     gap: 5px;
+}
+
+/* --- DROPDOWN & ACCORDION STYLES --- */
+details {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+summary.win95-dropdown {
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+    outline: none;
+    margin-top: 5px;
+}
+
+summary.win95-dropdown:active,
+summary.win95-dropdown-header:active {
+    color: #000080; /* Flashes navy blue when clicked */
+}
+
+summary.win95-dropdown-header {
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Forces the H2 to sit nicely next to the native dropdown arrow */
+summary.win95-dropdown-header h2 {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    border-bottom: none; /* Removes the underline from the h2 so it looks cleaner next to the arrow */
 }
