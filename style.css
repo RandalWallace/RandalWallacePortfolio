@@ -140,7 +140,7 @@ img {
     }
 }
 
-/* BUTTONS */
+/* STANDARD BUTTONS */
 .win95-btn, .start-btn {
     background: #c0c0c0;
     color: black;
@@ -198,38 +198,62 @@ img {
     gap: 5px;
 }
 
-/* --- DROPDOWN & ACCORDION STYLES --- */
+/* --- DROPDOWN & ACCORDION BUTTON STYLES --- */
 details {
     margin-top: 5px;
     margin-bottom: 15px;
+    width: 100%;
 }
 
-summary.win95-dropdown {
-    cursor: pointer;
+/* The Button Itself */
+summary.win95-dropdown-btn {
+    background: #c0c0c0;
+    box-shadow: inset -1px -1px #0a0a0a, 
+                inset 1px 1px #fff, 
+                inset -2px -2px #808080, 
+                inset 2px 2px #dfdfdf;
+    padding: 6px 12px;
     font-weight: bold;
-    user-select: none;
-    outline: none;
-    margin-top: 5px;
-}
-
-summary.win95-dropdown:active,
-summary.win95-dropdown-header:active {
-    color: #000080; /* Flashes navy blue when clicked */
-}
-
-summary.win95-dropdown-header {
     cursor: pointer;
-    user-select: none;
-    outline: none;
-    display: flex;
-    align-items: center;
+    display: block; /* Strips native weird flex/inline behavior */
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: black;
 }
 
-/* Forces the H2 to sit nicely next to the native dropdown arrow */
-summary.win95-dropdown-header h2 {
+/* Hide the default HTML marker in Chrome/Safari/Firefox */
+summary.win95-dropdown-btn::-webkit-details-marker {
+    display: none;
+}
+summary.win95-dropdown-btn::marker {
+    display: none;
+}
+
+/* Custom retro arrow icon */
+summary.win95-dropdown-btn::before {
+    content: "►";
     display: inline-block;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-    border-bottom: none; /* Removes the underline from the h2 so it looks cleaner next to the arrow */
+    width: 18px;
+    font-size: 10px;
+}
+details[open] summary.win95-dropdown-btn::before {
+    content: "▼";
+}
+
+/* Click Effect */
+summary.win95-dropdown-btn:active {
+    box-shadow: inset 1px 1px #0a0a0a, 
+                inset -1px -1px #fff, 
+                inset 2px 2px #808080, 
+                inset -2px -2px #dfdfdf;
+    padding: 7px 11px 5px 13px; /* Shifts content to simulate 3D press */
+}
+
+/* The Expanded White Container Well */
+.dropdown-well {
+    background: #fff;
+    border: 2px inset #dfdfdf;
+    padding: 10px 15px 10px 35px; /* Indents the bullets */
+    margin-top: 0;
+    margin-bottom: 10px;
 }
