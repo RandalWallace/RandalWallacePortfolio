@@ -1,4 +1,5 @@
-/* RESET EVERYTHING */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 * {
     box-sizing: border-box;
     border-radius: 0 !important; /* Forces off any modern rounded corners */
@@ -47,8 +48,10 @@ a, button, summary, win95-btn, .start-btn {
 
 .title-bar-text {
     color: white;
-    font-weight: bold;
-    font-size: 13px;
+    font-weight: normal;
+    font-size: 16px;
+    font-family: 'VT323', monospace; /* pixel font imported is used here */
+    letter-spacing: 1px;
 }
 
 .title-bar-controls {
