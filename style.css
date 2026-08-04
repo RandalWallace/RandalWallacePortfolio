@@ -10,14 +10,14 @@ body {
     background-attachment: fixed !important; 
     margin: 0;
     padding: 20px 20px 80px 20px !important; 
-    font-family: "MS Sans Serif", "Arial", sans-serif;
+    font-family: "MS Sans Serif", "Arial", sans-serif, 'VT323';
     color: black;
 
-    cursor: url('images/cursor.png'), auto;
+    cursor: url('images/cursor.png') 0 0, auto;
 }
 
 a, button, summary, win95-btn, .start-btn {
-    cursor: url('images/cursor.png'), pointer !important;
+    cursor: url('images/cursor.png') 0 0, pointer !important;
 }
 
 #desktop {
@@ -50,7 +50,7 @@ a, button, summary, win95-btn, .start-btn {
     color: white;
     font-weight: normal;
     font-size: 16px;
-    font-family: 'VT323', monospace; /* pixel font imported is used here */
+    font-family: 'VT323', monospace !important; /* pixel font imported is used here */
     letter-spacing: 1px;
 }
 
