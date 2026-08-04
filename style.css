@@ -11,6 +11,12 @@ body {
     padding: 20px 20px 80px 20px !important; 
     font-family: "MS Sans Serif", "Arial", sans-serif;
     color: black;
+
+    cursor: url('images/cursor.png'), auto;
+}
+
+a, button, summary, win95-btn, .start-btn {
+    cursor: url('images/cursor.png'), pointer !important;
 }
 
 #desktop {
