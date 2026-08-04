@@ -5,11 +5,9 @@
 }
 
 body {
-    /* Blue-purple gradient background */
-    background: linear-gradient(135deg, #000080 0%, #4b0082 100%) !important; 
-    background-attachment: fixed !important; /* Prevents the gradient from distorting on scroll */
+    background: linear-gradient(45deg, #0052D4 0%, #6536FF 50%, #B066FE 100%) !important; 
+    background-attachment: fixed !important; 
     margin: 0;
-    /* Massive bottom padding ensures the taskbar doesn't cover the footer/skills */
     padding: 20px 20px 80px 20px !important; 
     font-family: "MS Sans Serif", "Arial", sans-serif;
     color: black;
