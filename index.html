@@ -394,5 +394,34 @@
             <span id="clock">6:53 PM</span>
         </div>
     </footer>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            
+            // Determine AM or PM
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            
+            // Convert to 12-hour format
+            hours = hours % 12;
+            hours = hours ? hours : 12; // the hour '0' should be '12'
+            
+            // Add a leading zero to minutes if needed (e.g., '05' instead of '5')
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            
+            // Construct the time string
+            const timeString = hours + ':' + minutes + ' ' + ampm;
+            
+            // Update the HTML element
+            document.getElementById('clock').textContent = timeString;
+        }
+
+        // Run immediately on load, then update every second (1000 milliseconds)
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+    
 </body>
 </html>
