@@ -49,7 +49,7 @@ a, button, summary, win95-btn, .start-btn {
 .title-bar-text {
     color: white;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 20px;
     font-family: 'VT323', monospace !important; /* pixel font imported is used here */
     letter-spacing: 1px;
 }
