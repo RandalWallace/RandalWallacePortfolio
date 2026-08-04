@@ -5,7 +5,9 @@
 }
 
 body {
-    background-color: #008080 !important; /* Classic Teal */
+    /* Blue-purple gradient background */
+    background: linear-gradient(135deg, #000080 0%, #4b0082 100%) !important; 
+    background-attachment: fixed !important; /* Prevents the gradient from distorting on scroll */
     margin: 0;
     /* Massive bottom padding ensures the taskbar doesn't cover the footer/skills */
     padding: 20px 20px 80px 20px !important; 
