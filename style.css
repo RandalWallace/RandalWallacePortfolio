@@ -13,11 +13,11 @@ body {
     font-family: "MS Sans Serif", "Arial", sans-serif, 'VT323';
     color: black;
 
-    cursor: url('images/cursor.png') 0 0, auto;
+    cursor: url('images/cursor.jpeg') 0 0, auto;
 }
 
 a, button, summary, win95-btn, .start-btn {
-    cursor: url('images/cursor.png') 0 0, pointer !important;
+    cursor: url('images/cursor.jpeg') 0 0, pointer !important;
 }
 
 #desktop {
