@@ -68,7 +68,7 @@ a, button, summary, win95-btn, .start-btn {
     border-right-color: #808080;
     border-bottom-color: #808080;
     font-size: 10px;
-    cursor: pointer;
+    cursor: url(images/cursor.svg), auto;
 }
 
 .window-body {
